@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watch Ad & Earn</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f5f5f5;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <script src='//whephiwums.com/sdk.js' data-zone='9319650' data-sdk='show_9319650'></script>
+</head>
+<body>
+
+  <h1>Watch an Ad to Earn Rewards</h1>
+  <button onclick="watchAd()">Watch Ad</button>
+
+  <script>
+    function watchAd() {
+      show_9319650().then(() => {
+        // Replace this with your reward function logic
+        alert('You have seen an ad and earned a reward!');
+      }).catch((err) => {
+        console.error('Ad failed or was skipped:', err);
+        alert('Ad could not be shown. Try again later.');
+      });
+    }
+  </script>
+
+</body>
+</html>
